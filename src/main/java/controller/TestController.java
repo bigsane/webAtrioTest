@@ -16,12 +16,12 @@ public class TestController {
 	@Autowired
 	private PersonneService personneService;
 	
-	@GetMapping("/personne")
+	@GetMapping("/personnes")
 	public List<Personne> getListPersonne() {
 		return personneService.getListPersonne();
 	}
 	
-	@PostMapping("/personne/{id}")
+	@PostMapping("/personne")
 	public Personne savePersonne(@PathVariable Personne personne) {
 		return personneService.savePersonne(personne);
 	}
